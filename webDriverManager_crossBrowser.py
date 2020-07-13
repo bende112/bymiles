@@ -70,12 +70,5 @@ select.select_by_value('January')
 #         element.click()
 #         break
 
-
-
-
-
-
-
-
 time.sleep(5)
 driver.quit()
