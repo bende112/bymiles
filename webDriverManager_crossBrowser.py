@@ -45,12 +45,10 @@ yesContinue_link.click()
 
 time.sleep(2)
 
-# How many years of No Claims Discount do you have?
-# yearOfNoClaim_Discount = Select(driver.find_element(By.XPATH, '//*[@id="react-select-ncd--value"]/div[2]'))
-# yearOfNoClaim_Discount.select_by_value('3')
-# yearClaim = driver.find_elements_by_css_selector('.Select-control')[0].click()
-# select = Select(yearClaim)
-# select.select_by_value('0')
+
+yearClaim = driver.find_elements_by_css_selector('.Select-control')[0].click()
+select = Select(yearClaim)
+select.select_by_value('0')
 
 time.sleep(5)
 
@@ -60,9 +58,9 @@ age.send_keys(40)
 postCode = driver.find_element(By.XPATH, '//*[@id="postcode"]/input')
 postCode.send_keys('NR9 3AH')
 
-insuranceRenew = driver.find_elements_by_css_selector('.Select-control')[1].click()
-select = Select(insuranceRenew)
-select.select_by_value('January')
+insuranceRenew = driver.find_element(By.XPATH, '//*[@name="renewal_month"]/input')
+insuranceRenew.send_keys("March")
+
 
 # for element in insuranceRenew:
 #     print(element.text)
